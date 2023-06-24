@@ -28,7 +28,7 @@ close[i].onclick = function(){
 //criar função de new ellement
 function newEllement(){
 //criamos um New Ellement li na variavel li
-    let li = documment.createElement("li")
+    let li = document.createElement("li")
 //pegar o que o user digita no input
 let input = document.getElementById("task").value
 //cria uma variavel para armazenar um texto node:um texto node auxilia na criação de elemento no html
@@ -42,3 +42,10 @@ document.getElementById("principalList").appendChild(li)
 }
 document.getElementById("task").value=""
 }
+
+let botao = document.querySelector("#button_add")
+
+botao.addEventListener("click", function(event) {
+    event.preventDefault()
+    newEllement()
+})
